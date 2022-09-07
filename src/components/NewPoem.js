@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './NewPoem.css';
 
 
-const poemAPI = "http://localhost:8004/poems";
+const poemAPI = "http://localhost:3000/poems";
 
 function NewPoem({addPoem}) {
   const [title, setTitle] = useState("");
@@ -40,13 +40,13 @@ function NewPoem({addPoem}) {
         />
 
         <input 
-            placeholder="Author" 
+            placeholder="Author Name" 
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
         />
 
         <textarea 
-            placeholder="Write your masterpiece here..." 
+            placeholder="Feeling creative..." 
             rows={10} 
             value={content}
             onChange={(e) => setContent(e.target.value)}
@@ -54,7 +54,7 @@ function NewPoem({addPoem}) {
         
         <input 
             type="submit" 
-            value="Share your masterpiece" 
+            value="Post" 
         />
         </form>
     </div>

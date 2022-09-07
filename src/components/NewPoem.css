@@ -1,8 +1,18 @@
 form.new-poem-form {
     border: solid black 1px;
     padding: 1em;
-    display: flex;
     flex-direction: column;
+    background-color: #060b26;
+    margin-top: 0.5%;
+    justify-content: start;
+    align-items: center;
+    border-radius: 20px;
+    margin: 20px 10px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+
   }
   
   form.new-poem-form > input,
@@ -16,7 +26,7 @@ form.new-poem-form {
   button {
     font-weight: bold;
     font-size: 1em;
-    background: #04e8ff;
+    background-color: white;
     border: solid black 1px;
     padding: 0.5em;
     cursor: pointer;
@@ -27,9 +37,7 @@ form.new-poem-form {
     width: 250px;
     height: 100px;
     top: 0;
-    left: -100%;
-    transition: 850ms;
-    border-radius: 20px;
-    margin: 20px 20px;
-    background-color: #060b26;
+    
+
+
 }
