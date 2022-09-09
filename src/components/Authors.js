@@ -12,7 +12,19 @@ function Author() {
 
   return (
    <div>
-    
+    <div className="author">
+      {authors.map((author) => (
+        <div className="author-dets">
+          <div>
+            <h2>{author.name}</h2>
+          </div>
+          <div>
+            <h3>Poem:{author.title}</h3>
+            <p>Content:{author.content}</p>
+          </div>
+        </div>
+      ))}
+    </div>
    </div>);
 }
 
