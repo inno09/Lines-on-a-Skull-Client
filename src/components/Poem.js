@@ -19,9 +19,10 @@ function Poem({poem, removePoem, addToFavorites}) {
       <h3>{title}</h3>
       <p>{content}</p>
       <p><strong>- By {author}</strong></p>
-      <button onClick={() => setIsRead(!isRead)} > Mark as {isRead ? "unread" : "read" }</button>
+      <div className="poem">
       <button onClick={onDeleteClick} > Delete</button>
       <button onClick={() => addToFavorites(poem)}> {poem.isFavorite ? "Unfavorite" : "⭐Favorite" }</button>
+      </div>
     </div>
   );
 }

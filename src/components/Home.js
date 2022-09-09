@@ -1,5 +1,8 @@
+
+
 import React, { useState, useEffect } from 'react';
 import PoemsContainer from "./PoemContainer";
+import './Home.css';
 const poemsAPI = " http://localhost:9292/poems";
 
 function Home() {
@@ -43,8 +46,10 @@ function Home() {
   }
 
     return(
-        <div className="Box-2">
+      <div className="card">
+        <div className="cardContainer">
           {renderPoemView()}
+        </div>
         </div>
     )
 }

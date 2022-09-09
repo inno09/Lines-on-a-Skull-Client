@@ -10,12 +10,7 @@ export const SidebarData = [
     icon: <AiIcons.AiFillHome />,
     cName: 'nav-text'
   },
-  {
-    title: 'Explore',
-    path: '/explore',
-    icon: <IoIcons.IoIosSearch />,
-    cName: 'nav-text'
-  },
+  
   {
     title: 'Authors',
     path: '/authors',
@@ -34,10 +29,17 @@ export const SidebarData = [
     icon: <FaIcons.FaStar />,
     cName: 'nav-text'
   },
+
   {
-    title: 'About Us',
+    title: 'Explore',
+    path: '/explore',
+    icon: <IoIcons.IoIosSearch />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Add Poem',
     path: '/about',
-    icon: <IoIcons.IoMdHelpCircle />,
+    icon: <FaIcons.FaPencilAlt />,
     cName: 'nav-text'
   }
 ];

@@ -7,11 +7,26 @@ function Genre() {
   useEffect(() => {
     fetch("http://localhost:9292/genres")
     .then(response => response.json())
-    .then((data) => setAuthor(data));
+    .then((data) => setGenre(data));
     }, []);
 
-  return <div>Genre</div>;
-}
+    return (
+      <div>
+       <div className="author">
+         {genres.map((genre) => (
+           <div className="author-dets">
+             <div>
+               <h2>{genre.name}</h2>
+             </div>
+             {/* <div>
+               <h3>Poem:{poem.title}</h3>
+               <p>Content:{poem.content}</p>
+             </div> */}
+           </div>
+         ))}
+       </div>
+      </div>);
+   }
 
 export default Genre;
 
