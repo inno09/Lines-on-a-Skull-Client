@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import './NewPoem.css';
 
+const poemAPI = "http://localhost:9292/poems";
 
-const poemAPI = "http://localhost:3000/poems";
-
-function NewPoem({addPoem}) {
+function NewPoemForm({addPoem}) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [author, setAuthor] = useState("");
@@ -31,34 +29,32 @@ function NewPoem({addPoem}) {
   }
 
   return (
-    <div className="new-poem">
-        <form className="new-poem-form" onSubmit={handleSubmit} >
-        <input 
-            placeholder="Title" 
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-        />
+    <form className="new-poem-form" onSubmit={handleSubmit} >
+      <input 
+        placeholder="Title" 
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
 
-        <input 
-            placeholder="Author Name" 
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
-        />
+      <input 
+        placeholder="Author" 
+        value={author}
+        onChange={(e) => setAuthor(e.target.value)}
+      />
 
-        <textarea 
-            placeholder="Feeling creative..." 
-            rows={10} 
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-        />
-        
-        <input 
-            type="submit" 
-            value="Post" 
-        />
-        </form>
-    </div>
+      <textarea 
+        placeholder="Write your masterpiece here..." 
+        rows={20} 
+        value={content}
+        onChange={(e) => setContent(e.target.value)}
+      />
+      
+      <input 
+        type="submit" 
+        value="Share your masterpiece" 
+      />
+    </form>
   );
 }
 
-export default NewPoem;
+export default NewPoemForm;
