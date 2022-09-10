@@ -29,32 +29,39 @@ function NewPoemForm({addPoem}) {
   }
 
   return (
-    <form className="new-poem-form" onSubmit={handleSubmit} >
-      <input 
-        placeholder="Title" 
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
-
-      <input 
-        placeholder="Author" 
-        value={author}
-        onChange={(e) => setAuthor(e.target.value)}
-      />
-
-      <textarea 
-        placeholder="Write your masterpiece here..." 
-        rows={20} 
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-      />
-      
-      <input 
-        type="submit" 
-        value="Share your masterpiece" 
-      />
-    </form>
+    <div className="center">
+    <form>
+  //               <div className="txt-field">
+  //               <input
+                    type="text" required />
+                    <label>Title</label>
+                    </div>
+                    <div className="txt-field">
+                    <textarea
+                    type="text" required />
+                    <label>Content</label>
+                    </div>
+                    <div className="txt-field">
+                    <input
+                    type="number" required />
+                    <label>Likes</label>
+                    </div>
+                    <div className="txt-field">
+                    <input
+                    type="number" required />
+                    <label>Author-id</label>
+                    </div>
+                    <div className="txt-field">
+                    <input
+                    type="number" required />
+                    <label>Genre-id</label>
+                    </div>
+                    <input id="submit" type="submit" value="SHARE YOUR THOUGHTS"/>
+                </form>
+    </div>
   );
 }
 
 export default NewPoemForm;
+
+
