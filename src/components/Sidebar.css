@@ -23,6 +23,8 @@
   transition: 850ms;
   border-radius: 20px;
   margin: 20px 20px;
+  border: 1px black solid;
+  box-shadow: 4px 4px 10px black;
 }
 
 .nav-menu.active {

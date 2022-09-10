@@ -7,6 +7,7 @@ function NewPoemForm({addPoem}) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [author, setAuthor] = useState("");
+  const [genre, setGenre] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -19,6 +20,7 @@ function NewPoemForm({addPoem}) {
         title,
         content,
         author,
+        genre
       }),
     })
       .then((r) => r.json())
@@ -31,29 +33,37 @@ function NewPoemForm({addPoem}) {
 
   return (
     <div className="center">
-    <form className="form-horizontal">
-      <div className="txt-field">
-        <input
-        type="text" required />
-        <label>Title</label>
-      </div>
-      <div className="txt-field">
-        <textarea
-        type="text" required />
-        <label>Content</label>
-      </div>
-      <div className="txt-field">
-        <input
-        type="number" required />
-        <label>Author-id</label>
-      </div>
-      <div className="txt-field">
-        <input
-         type="number" required />
-         <label>Genre-id</label>
-      </div>
-        <input id="submit" type="submit" value="SHARE YOUR MASTERPIECE"/>
-      </form>
+    <form className="new-poem-form" onSubmit={handleSubmit} >
+      <input 
+        placeholder="Title" 
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
+
+      <input 
+        placeholder="Author" 
+        value={author}
+        onChange={(e) => setAuthor(e.target.value)}
+      />
+
+      <input 
+        placeholder="Genre" 
+        value={genre}
+        onChange={(e) => setGenre(e.target.value)}
+      />
+
+      <textarea 
+        placeholder="Write your masterpiece here..." 
+        rows={20} 
+        value={content}
+        onChange={(e) => setContent(e.target.value)}
+      />
+      
+      <input 
+        type="submit" 
+        value="Share your masterpiece" 
+      />
+    </form>
     </div>
   );
 }
